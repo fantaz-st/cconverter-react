@@ -1,0 +1,25 @@
+.favorite-button {
+  margin: 0 0 20px 0;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 2px;
+  background: #ffffff;
+  border: none;
+  color: #0c7cd5;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.favorite-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .favorite-button {
+    flex: 1 1 20%;
+    min-width: 100px;
+  }
+}

@@ -1,0 +1,49 @@
+.flex-me {
+  display: flex;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  color: rgb(20, 30, 55);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+}
+
+.input-symbol {
+  padding: 9px 0 9px 4px;
+  margin-right: 4px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.input-amount {
+  padding: 8px;
+  color: rgb(20, 30, 55);
+  width: 200px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+input:focus,
+select:focus {
+  border: none;
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 768px) {
+  input {
+    width: 100%;
+  }
+}

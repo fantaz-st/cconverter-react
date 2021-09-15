@@ -1,0 +1,27 @@
+.toggle-favorite {
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+
+.toggle-favorite:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 2px;
+}
+
+.toggle-favorite .heart {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: red;
+  height: 30px;
+  width: 30px;
+}

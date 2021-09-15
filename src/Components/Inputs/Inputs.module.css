@@ -1,0 +1,18 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+  position: relative;
+  z-index: 999;
+}
+@media only screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .flex input {
+    width: 100%;
+  }
+}

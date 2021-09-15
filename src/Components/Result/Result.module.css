@@ -1,0 +1,25 @@
+.is-equal {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(46, 60, 87);
+  margin-bottom: 15px;
+}
+
+.is-equal span {
+  color: #a1a6b0;
+}
+
+.result-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  margin-top: 1em;
+}
+
+.rate-1,
+.rate-2 {
+  color: #5c6664;
+}
