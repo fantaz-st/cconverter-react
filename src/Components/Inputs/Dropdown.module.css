@@ -114,6 +114,12 @@
   background-image: url('https://wise.com/public-resources/assets/flags/rectangle_fallback.png');
 }
 
+@media only screen and (max-width: 768px) {
+  .dropdown ul {
+    z-index: 999;
+  }
+}
+
 .currency-flag-sm {
   width: 16px;
   height: 10px;
