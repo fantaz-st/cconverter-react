@@ -43,7 +43,13 @@ select:focus {
 }
 
 @media only screen and (max-width: 768px) {
-  input {
+  input,
+  .flex-me {
     width: 100%;
+  }
+
+  .row {
+    justify-content: flex-start;
+    align-content: flex-start;
   }
 }

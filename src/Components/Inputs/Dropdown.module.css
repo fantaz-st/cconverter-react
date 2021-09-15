@@ -115,8 +115,19 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+  }
   .dropdown ul {
     z-index: 999;
+  }
+
+  .dropdown-button {
+    width: auto;
+  }
+  .row {
+    justify-content: flex-start;
+    align-content: flex-start;
   }
 }
 
