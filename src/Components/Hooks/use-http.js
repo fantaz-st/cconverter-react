@@ -8,7 +8,6 @@ const useHttp = () => {
     try {
       const response = await fetch(config.url);
       const data = await response.json();
-      console.log(data);
 
       functionWhichUsesData(data);
     } catch (err) {
