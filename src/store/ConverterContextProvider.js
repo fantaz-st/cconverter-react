@@ -5,9 +5,9 @@ import ConverterContext from './converter-context';
 import { initialState, reducer } from './helpers';
 
 const URL_1 = `https://api.exchangerate.host/latest/`;
-const URL_2 = `https://gist.githubusercontent.com/Fluidbyte/2973986/raw/8bb35718d0c90fdacb388961c98b8d56abc392c9/Common-Currency.json`;
+const URL_2 = `https://gist.githubusercontent.com/QuentinBens/d0c040d6cc0d6987ae0afa8ab1defcda/raw/0a1584705960a86bb2515d106d4fce2436565acf/CurrencyMap.json`;
 
-const ConverterContextProvider = props => {
+const ConverterContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const { error: fetchRatesError, sendRequest: fetchRates } = useHttp();
@@ -25,14 +25,14 @@ const ConverterContextProvider = props => {
   }, []);
 
   useEffect(() => {
-    const addRatesToState = data => {
+    const addRatesToState = (data) => {
       dispatch({
         type: 'ADD_RATES',
         value: data.rates,
       });
     };
 
-    const addRatesInformationToState = data => {
+    const addRatesInformationToState = (data) => {
       dispatch({
         type: 'ADD_VALUTES',
         value: data,
@@ -58,17 +58,17 @@ const ConverterContextProvider = props => {
     }
   }, [fetchRatesError, fetchRatesInformationError]);
 
-  const onSetActiveDropdown = value => {
+  const onSetActiveDropdown = (value) => {
     dispatch({ type: 'SET_ACTIVE_DROPDOWN', value: value });
   };
 
-  const onAssignValute = valute => {
+  const onAssignValute = (valute) => {
     if (state.activeDropdown === 'from') dispatch({ type: 'SET_FROM', value: valute });
     if (state.activeDropdown === 'to') dispatch({ type: 'SET_TO', value: valute });
     onSetActiveDropdown('');
   };
 
-  const onSetInputValue = value => {
+  const onSetInputValue = (value) => {
     dispatch({ type: 'SET_INPUT_VALUE', value: value });
   };
 
@@ -77,8 +77,8 @@ const ConverterContextProvider = props => {
 
   useEffect(() => {
     const valutes = Object.keys(ratesArr)
-      .filter(rate => (rate = valutesArr[rate]))
-      .map(rate => {
+      .filter((rate) => (rate = valutesArr[rate]))
+      .map((rate) => {
         return {
           code: rate,
           name: valutesArr[rate].name,
@@ -123,9 +123,9 @@ const ConverterContextProvider = props => {
     }
   }, [fromValute, toValute, inputValue, rates, valutesWithInfo]);
 
-  const onSetSelectedFavorite = value => {
-    const from = valutesWithInfo.filter(val => val.code === value.split('-')[0]);
-    const to = valutesWithInfo.filter(val => val.code === value.split('-')[1]);
+  const onSetSelectedFavorite = (value) => {
+    const from = valutesWithInfo.filter((val) => val.code === value.split('-')[0]);
+    const to = valutesWithInfo.filter((val) => val.code === value.split('-')[1]);
     dispatch({
       type: 'SET_SELECTED_FAVORITE',
       payload: {
@@ -148,7 +148,7 @@ const ConverterContextProvider = props => {
   const onToggleFavorites = () => {
     const fromTo = `${state.fromValute.code}-${state.toValute.code}`;
     if (state.favorites.includes(fromTo)) {
-      const newFavorites = state.favorites.filter(fav => fav !== fromTo);
+      const newFavorites = state.favorites.filter((fav) => fav !== fromTo);
       dispatch({
         type: 'REMOVE_FAVORITE',
         value: newFavorites,

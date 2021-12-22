@@ -2,8 +2,8 @@ import React from 'react';
 
 import classes from './DropdownElement.module.css';
 
-const DropdownElement = props => {
-  const onListItemClick = e => {
+const DropdownElement = (props) => {
+  const onListItemClick = (e) => {
     props.onValuteClick({ code: props.code, name: props.name });
   };
 
