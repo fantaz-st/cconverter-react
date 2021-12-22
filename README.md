@@ -5,7 +5,7 @@
 ## Resources
 
 The app is using an api provided from https://exchangerate.host/ to fetch current rates.
-After it fetches the rates it requests valute information from https://gist.githubusercontent.com/Fluidbyte/2973986/raw/8bb35718d0c90fdacb388961c98b8d56abc392c9/Common-Currency.json
+After it fetches the rates it requests valute information from https://gist.github.com/QuentinBens/d0c040d6cc0d6987ae0afa8ab1defcda
 
 ## Functionality
 
